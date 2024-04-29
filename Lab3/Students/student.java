@@ -1,17 +1,17 @@
-package Students;
-
 import Classes.Class;
 
 public class Student {
     private final String name;
     private String MatNr;
     private final String gender;
-    private final boolean isPreferredCandidate;
+    private final String courseName;
+    private final String semester;
 
-    public Student(String name, String gender, boolean isPreferredCandidate) {
+    public Student(String name, String gender, String courseName, String semester) {
         this.name = name;
-        this.gender = genders;
-        this.isPreferredCandidate = isPreferredCandidate;
+        this.gender = gender;
+        this.courseName = courseName;
+        this.semester = semester;
         setRandomStudentMatnr();
     }
 
@@ -26,13 +26,4 @@ public class Student {
     public String getName() {
         return name;
     }
-
-    public boolean isPreferredCandidate() {
-        return isPreferredCandidate;
-    }
-
-    public void notifyifaccepted(Class acceptedClass) {
-        System.out.println("Student.Student" + name + " has been accepted to class " + acceptedClass);
-    }
-
 }
